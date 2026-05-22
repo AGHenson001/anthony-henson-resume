@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anthony G. Henson | Executive Leadership Profile</title>
+  <meta name="description" content="Anthony G. Henson - AI-enabled operations, transformation, shared services and commercial strategy executive." />
+  <style>
+    :root {
+      --ink: #07111f;
+      --navy: #0b1220;
+      --navy-2: #111c31;
+      --steel: #334155;
+      --muted: #64748b;
+      --soft: #f6f8fb;
+      --line: #dbe4ee;
+      --card: #ffffff;
+      --aqua: #12b7e8;
+      --blue: #2563eb;
+      --gold: #f4b740;
+      --green: #13a878;
+      --shadow: 0 22px 55px rgba(2, 8, 23, 0.12);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8fbff 0%, #eef5fb 100%);
+      line-height: 1.58;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid rgba(219, 228, 238, 0.75);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 18px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--steel);
+    }
+
+    .nav a:hover { color: var(--blue); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(circle at 78% 20%, rgba(18, 183, 232, 0.35), transparent 34%),
+        radial-gradient(circle at 10% 70%, rgba(244, 183, 64, 0.16), transparent 30%),
+        linear-gradient(135deg, #07111f 0%, #111c31 54%, #082f49 100%);
+      padding: 84px 0 54px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -130px auto;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #7dd3fc;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5.5rem);
+      line-height: 0.96;
+      margin: 0 0 18px;
+      letter-spacing: -0.07em;
+    }
+
+    .hero-title {
+      font-size: clamp(1.15rem, 2.2vw, 1.75rem);
+      color: #d9f3ff;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      font-size: 1.08rem;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 0 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { background: var(--aqua); color: #001827; border-color: var(--aqua); }
+    .btn.ghost { background: rgba(255,255,255,0.08); color: white; }
+
+    .hero-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.17);
+      border-radius: 30px;
+      padding: 24px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.28);
+    }
+
+    .hero-card h3 {
+      margin: 0 0 16px;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .metric {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 1.05;
+      color: #ffffff;
+      letter-spacing: -0.04em;
+    }
+
+    .metric span {
+      display: block;
+      color: #cbd5e1;
+      font-size: 0.86rem;
+      margin-top: 6px;
+    }
+
+    .contact-strip {
+      background: white;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-strip .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding: 15px 0;
+      font-size: 0.95rem;
+      color: var(--steel);
+    }
+
+    .section { padding: 70px 0; }
+    .section.compact { padding: 46px 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .section-kicker {
+      color: var(--blue);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 3vw, 2.6rem);
+      margin: 0;
+      letter-spacing: -0.05em;
+      line-height: 1.08;
+    }
+
+    .lead {
+      max-width: 760px;
+      color: var(--steel);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      background: #eaf7fd;
+      color: #075985;
+      border: 1px solid #bae6fd;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 14px 40px rgba(15,23,42,0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      letter-spacing: -0.03em;
+      font-size: 1.15rem;
+    }
+
+    .card p { margin: 0; color: var(--steel); }
+
+    .highlight {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, white, #f0f9ff);
+    }
+
+    .highlight::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--aqua), var(--blue));
+    }
+
+    .impact-board {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 14px;
+    }
+
+    .impact {
+      background: var(--navy);
+      color: white;
+      border-radius: 22px;
+      padding: 24px;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .impact strong {
+      font-size: 2.2rem;
+      letter-spacing: -0.07em;
+      line-height: 1;
+    }
+
+    .impact span { color: #cbd5e1; font-weight: 700; }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 14px 38px rgba(15,23,42,0.055);
+    }
+
+    .role-side {
+      border-right: 1px solid var(--line);
+      padding-right: 22px;
+    }
+
+    .role-side h3 {
+      margin: 0 0 8px;
+      letter-spacing: -0.04em;
+      font-size: 1.25rem;
+    }
+
+    .company {
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .dates {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 6px;
+    }
+
+    .role-body p { margin-top: 0; color: var(--steel); }
+
+    .achievement-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .achievement {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: #fbfdff;
+      color: var(--steel);
+      font-size: 0.95rem;
+    }
+
+    .achievement b { color: var(--navy); }
+
+    .mini-timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-role {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 12px;
+      padding: 18px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .mini-role strong { display: block; }
+    .mini-role span { color: var(--muted); }
+
+    .education-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .edu {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .edu strong { display: block; color: var(--navy); }
+    .edu span { color: var(--muted); }
+
+    .footer {
+      background: var(--navy);
+      color: white;
+      padding: 42px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .footer h2 { color: white; }
+    .footer p { color: #cbd5e1; margin-bottom: 0; }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .grid-3, .grid-2, .impact-board, .role, .education-list, .footer-grid { grid-template-columns: 1fr; }
+      .role-side { border-right: 0; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 16px; }
+      .achievement-list { grid-template-columns: 1fr; }
+      .nav { display: none; }
+      .hero { padding-top: 58px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">Anthony G. Henson</a>
+      <div class="nav">
+        <a href="#profile">Profile</a>
+        <a href="#impact">Impact</a>
+        <a href="#recognition">Recognition</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Executive Leadership Profile</div>
+        <h1>Anthony G. Henson</h1>
+        <p class="hero-title">AI-Enabled Operations & Transformation Executive</p>
+        <p class="hero-copy">Building scalable offshore operating models, shared services capability, AI-enabled delivery organisations, and governance-driven transformation environments across APAC.</p>
+        <div class="pill-row">
+          <span class="pill">Country Leadership</span>
+          <span class="pill">AI & Automation</span>
+          <span class="pill">Shared Services</span>
+          <span class="pill">Commercial Strategy</span>
+          <span class="pill">COPC-Aligned Governance</span>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:anthonyghenson@gmail.com">Contact Anthony</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/anthony-Antho-henson" target="_blank" rel="noopener">View LinkedIn</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Executive Snapshot</h3>
+        <div class="metric-grid">
+          <div class="metric"><strong>23+</strong><span>Years across global BPO and shared services</span></div>
+          <div class="metric"><strong>10K</strong><span>Largest vendor footprint overseen</span></div>
+          <div class="metric"><strong>AUD 50M</strong><span>Operational portfolio supported</span></div>
+          <div class="metric"><strong>3,600</strong><span>WFH migration under COVID lockdowns</span></div>
+          <div class="metric"><strong>70%</strong><span>Cost savings versus onshore IT consulting</span></div>
+          <div class="metric"><strong>98%</strong><span>Collections achievement rate</span></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div class="contact-strip">
+    <div class="container">
+      <a href="mailto:anthonyghenson@gmail.com">anthonyghenson@gmail.com</a>
+      <span>|</span>
+      <span>+63 917-551-1229</span>
+      <span>|</span>
+      <a href="https://www.linkedin.com/in/anthony-Antho-henson" target="_blank" rel="noopener">linkedin.com/in/anthony-Antho-henson</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="section" id="profile">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Profile</div>
+            <h2>Operator, builder, and commercially grounded transformation executive.</h2>
+          </div>
+        </div>
+        <div class="grid-3">
+          <div class="card highlight">
+            <h3>Technology & AI Innovation</h3>
+            <p>Drives enterprise-scale automation and AI enablement initiatives that improve operational performance, commercial outcomes, client perception, and transformation maturity.</p>
+          </div>
+          <div class="card highlight">
+            <h3>Offshore & Shared Services Strategy</h3>
+            <p>Designs and executes offshore operating blueprints for global organisations, including transitions into production-scale environments and multi-disciplinary delivery hubs.</p>
+          </div>
+          <div class="card highlight">
+            <h3>Commercial & Business Strategy</h3>
+            <p>Combines client-side and vendor-side experience across contract acquisition, commercial negotiations, vendor governance, and operating model optimisation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container grid-2">
+        <div class="card">
+          <div class="section-kicker">Leadership Philosophy</div>
+          <h3>Technology succeeds when execution discipline keeps it real.</h3>
+          <p>My leadership philosophy is grounded in partnering with progressive organisations that share a vision for AI and technology-enabled transformation, while positioning Philippine talent at the forefront of global delivery excellence.</p>
+        </div>
+        <div class="card">
+          <div class="section-kicker">Industry Breadth</div>
+          <h3>Experience across regulated, high-volume, and service-intensive environments.</h3>
+          <div class="pill-row">
+            <span class="pill">Telecommunications — 11 years</span>
+            <span class="pill">Healthcare — 8 years</span>
+            <span class="pill">Financial Services — 7 years</span>
+            <span class="pill">Tech Services & Platform Ops — 7 years</span>
+            <span class="pill">Media & Entertainment — 5 years</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Selected Impact</div>
+            <h2>Outcomes that show scale, governance, and commercial value.</h2>
+          </div>
+        </div>
+        <div class="impact-board">
+          <div class="impact"><strong>350 → 3,500</strong><span>Helped scale Results Companies Philippines during a post-separation build phase.</span></div>
+          <div class="impact"><strong>USD 6M → 8M</strong><span>Expanded satellite radio account value within the first year.</span></div>
+          <div class="impact"><strong>2,400 FTE</strong><span>Led digital customer experience operations for telecom and fintech environments.</span></div>
+          <div class="impact"><strong>105%</strong><span>Delivered second-site launch performance against target at VXI.</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="recognition">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Leadership Recognition</div>
+            <h2>Executive and peer endorsements across transformation, operations, and customer delivery.</h2>
+          </div>
+        </div>
+
+        <p class="lead">Independent excerpts recognising diplomacy, stakeholder engagement, customer-centricity, operational rigor, and transformation leadership across high-scale delivery environments.</p>
+
+        <div class="grid-2" style="margin-top: 26px;">
+          <div class="card highlight">
+            <h3>Jesper Ong, CPA</h3>
+            <p style="margin-bottom:10px; color:var(--muted); font-weight:700;">Sr. Assistant Vice President, BDO Unibank</p>
+            <p>“Strong strategic vision, operational leadership, and transformation capability across complex telecommunications environments.”</p>
+            <p style="margin-top:12px;">“Balanced innovation with pragmatic execution while engaging frontline teams and senior executives.”</p>
+          </div>
+
+          <div class="card highlight">
+            <h3>Jonathan Trubshaw</h3>
+            <p style="margin-bottom:10px; color:var(--muted); font-weight:700;">Fintech | SaaS | DX Transformation | BPO</p>
+            <p>“A natural diplomat who consistently achieves outcomes while keeping stakeholders aligned and engaged.”</p>
+            <p style="margin-top:12px;">“Strong customer orientation, operational leadership, and composure in high-pressure delivery environments.”</p>
+          </div>
+
+          <div class="card highlight">
+            <h3>Robert Salva Cruz</h3>
+            <p style="margin-bottom:10px; color:var(--muted); font-weight:700;">Executive Director, TTEC</p>
+            <p>“Recognised for bringing innovation and operational improvements within large-scale customer service environments.”</p>
+            <p style="margin-top:12px;">“Delivers results under pressure through strong execution discipline and people leadership.”</p>
+          </div>
+
+          <div class="card highlight">
+            <h3>Jimmy Jadwani</h3>
+            <p style="margin-bottom:10px; color:var(--muted); font-weight:700;">Business Growth Specialist</p>
+            <p>“Thrives in difficult operational situations and customer escalations requiring decisive recovery leadership.”</p>
+            <p style="margin-top:12px;">“Customer-focused with laser-like execution discipline and strong accountability.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Career Narrative</div>
+            <h2>Built through scale-up phases, turnarounds, governance maturity, commercial transformation, and delivery leadership.</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="role">
+            <div class="role-side">
+              <h3>Country Head – APAC Support</h3>
+              <div class="company">Glow Financial Services</div>
+              <div class="dates">Aug 2023 – Present · BGC, Taguig City</div>
+            </div>
+            <div class="role-body">
+              <p>Heads Manila Business Operations supporting APAC financial services delivery across multiple markets, overseeing EOR partnerships, consulting firms, and global vendor providers delivering customer, operational, technology, and product support across an operational portfolio valued at approximately AUD 50M.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Expansion:</b> Transformed the Manila Hub from a contact centre into a multi-disciplinary Technology Delivery Hub supporting IT development, systems administration, and operational platform technology functions.</div>
+                <div class="achievement"><b>Value Creation:</b> Delivered ~70% cost savings versus onshore IT consulting vendors while improving deployment speed by ~30%.</div>
+                <div class="achievement"><b>Enabling:</b> Designed controlled manual-redundancy frameworks that kept operations compliant and uninterrupted while automation and technology solutions stabilised.</div>
+                <div class="achievement"><b>Visibility:</b> Established executive reporting baselines by translating LMS and CRM data into Power BI dashboards supporting performance visibility, expansion planning, and monthly funder reporting.</div>
+                <div class="achievement"><b>Partnerships:</b> Expanded vendor-led service capabilities including mail handling and statutory lending compliance training at below-market cost.</div>
+                <div class="achievement"><b>Governance:</b> Strengthened offshore oversight through COPC-aligned reporting discipline, workflow accountability, and vendor governance for scalable shared services delivery.</div>
+                <div class="achievement"><b>Optimisation:</b> Improved servicing efficiency through flexible workforce structures, callback-first servicing, automated email routing, response workflows, and collections completion tracking.</div>
+                <div class="achievement"><b>Outcomes:</b> Helped achieve a 5-day average complaint resolution cycle and 98% collections achievement rates.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Assistant Country Head – Philippines</h3>
+              <div class="company">Tech Mahindra</div>
+              <div class="dates">Nov 2020 – Jul 2023 · Quezon City</div>
+            </div>
+            <div class="role-body">
+              <p>Led ~2,400 FTE across digital customer experience channels for the Philippines’ largest telecommunications provider and its dual-unicorn mobile wallet subsidiary, with responsibility spanning operational delivery, platform governance, workforce operations, and commercial performance.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Turnaround:</b> Repositioned a loss-making operation to achieve EBITDA targets by restructuring leadership cost models, strengthening client billing governance, and improving collections performance within the first two quarters.</div>
+                <div class="achievement"><b>Platform Strategy:</b> Managed delivery and commercial performance of a white-label omnichannel social engagement platform, protecting the 16% revenue share generated from platform services alongside per-interaction billing.</div>
+                <div class="achievement"><b>Quality:</b> Embedded Poka-Yoke and CTQ validation controls across critical customer transactions, delivering a full operational performance turnaround within four months.</div>
+                <div class="achievement"><b>Customer Outcomes:</b> Consistently led Voice of the Customer scores while achieving best-in-class error-rate performance.</div>
+                <div class="achievement"><b>Governance:</b> Enhanced operational BCP by establishing structured communication and escalation channels across employees, executives, and client stakeholders.</div>
+                <div class="achievement"><b>Transformation:</b> Strengthened digital servicing maturity through operational redesign, governance discipline, and scalable support structures aligned to high-volume telecom and fintech environments.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Director – Operations & Account Management, APAC</h3>
+              <div class="company">Results Companies</div>
+              <div class="dates">Jan 2018 – Sep 2020 · Pasig City</div>
+            </div>
+            <div class="role-body">
+              <p>Supported a strategic APAC growth portfolio across telecommunications, digital infrastructure, IT managed support services, food and beverage, and media and entertainment sectors, combining operations, account management, business development, AI advocacy, and COPC-aligned governance.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Technology Solutions:</b> Developed TIO Predictor, Silence Time Analysis, and Emotion Word Cloud Association tools to strengthen service differentiation and support new client acquisition.</div>
+                <div class="achievement"><b>Recognition:</b> Contributed to a client-led nomination for the Australian Paragon Awards.</div>
+                <div class="achievement"><b>Capability Building:</b> Redesigned entry-level talent profiling and development through a bespoke learning methodology that outperformed incumbent operational teams.</div>
+                <div class="achievement"><b>Growth:</b> Enabled 2× growth of a pioneer prepaid telecommunications account after the methodology was adopted across partner networks.</div>
+                <div class="achievement"><b>Transformation:</b> Integrated data-driven performance analysis, workforce optimisation, and scalable service delivery frameworks across high-growth APAC accounts.</div>
+                <div class="achievement"><b>Continuity:</b> Assumed project management leadership during COVID-19 and migrated ~30% of the Philippine workforce, around 3,600 employees, to work-from-home under lockdown conditions.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Co-owner & Finance Officer</h3>
+              <div class="company">Kafe Razzo Coffee Shop & Sports Bar</div>
+              <div class="dates">Jan 2011 – Jan 2018 · Manila</div>
+            </div>
+            <div class="role-body">
+              <p>Co-founded and scaled a community-based food and beverage business, gaining owner-operator experience across financial management, budgeting, cash flow, supplier governance, customer experience, staffing, seasonal demand variability, and commercial sustainability.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Entrepreneurship:</b> Evolved the business from a neighbourhood coffee shop into a multi-format venue combining café, dining, and sports bar operations.</div>
+                <div class="achievement"><b>Financial Management:</b> Managed budgeting, supplier payments, cash flow oversight, and operational cost controls within an owner-operated environment.</div>
+                <div class="achievement"><b>Operational Agility:</b> Improved staffing, inventory coordination, and customer servicing workflows to sustain service quality during seasonal demand shifts.</div>
+                <div class="achievement"><b>Networking:</b> Built a recurring customer base across university communities, government employees, and local repeat clientele.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Senior Vendor Manager – Industry Partner Strategy & Enablement</h3>
+              <div class="company">Telstra ROHQ</div>
+              <div class="dates">Jan 2015 – May 2017 · Manila</div>
+            </div>
+            <div class="role-body">
+              <p>Led vendor operations across Teleperformance, Convergys, and TeleTech, covering approximately 10,000 FTE across six large-scale delivery super sites and multiple lines of business aligned to Telstra assurance standards.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Commercial Transformation:</b> Led transition from traditional billing structures toward a Cost-per-Resolution model, influencing a major vendor and broader adoption across the ecosystem.</div>
+                <div class="achievement"><b>Performance Governance:</b> Reoriented vendor engagement toward objective, performance-based accountability through transparent operational benchmarking.</div>
+                <div class="achievement"><b>Portfolio Maturity:</b> Reduced influence-driven bias and improved vendor portfolio performance through data-led governance and assurance standards.</div>
+                <div class="achievement"><b>Branding:</b> Championed the Manila Brand of Care by elevating frontline customer impact stories to executive visibility.</div>
+                <div class="achievement"><b>Recognition:</b> Helped create visibility for a life-saving frontline escalation that contributed to the Telstra Champion recognition program.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Associate Director – Operations</h3>
+              <div class="company">VXI</div>
+              <div class="dates">Sep 2013 – Jan 2015 · Makati</div>
+            </div>
+            <div class="role-body">
+              <p>Led customer service operations supporting a major U.S. telecommunications provider, balancing customer experience delivery with revenue-generating subscription retention and hardware upsell performance.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Solutions Architecture:</b> Established a premium billable operational Think Tank focused on solving frontline servicing pain points through scalable enablement approaches.</div>
+                <div class="achievement"><b>Enterprise Standards:</b> Built early operational solutions such as Smart Chat and Solution Senders, later scaled into global enterprise delivery standards.</div>
+                <div class="achievement"><b>Champion Performance:</b> Received the 2013 Choice Vendor Award for highest-performing vendor operation during the final quarter.</div>
+                <div class="achievement"><b>Scalability:</b> Enabled rapid operational expansion by launching a second delivery centre that achieved 105% of target performance through disciplined execution and proven playbooks.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Senior Manager – Operations</h3>
+              <div class="company">Startek</div>
+              <div class="dates">Jun 2013 – Aug 2013 · San Fernando, Pampanga</div>
+            </div>
+            <div class="role-body">
+              <p>Supported the expansion of a U.S. telecommunications back-office operation in Pampanga, leveraging regional familiarity and local workforce insight to stabilise operations, accelerate workforce ramp-up, and maintain delivery continuity during a key growth period.</p>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Senior Manager – Operations & Account Management</h3>
+              <div class="company">Results Companies</div>
+              <div class="dates">Mar 2010 – May 2013 · Pasig City</div>
+            </div>
+            <div class="role-body">
+              <p>Brought in as part of the foundational leadership group during a critical post-separation scale-up phase, helping Results Companies grow from approximately 350 to 3,500 headcount within just over two years.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Benchmark Performance:</b> Became the first vendor partner to achieve and sustain CSAT targets for a U.S. satellite radio client, outperforming a five-year incumbent.</div>
+                <div class="achievement"><b>Commercial Growth:</b> Expanded a U.S. satellite radio account from USD 6M to USD 8M within its first year, earning Top Vendor recognition and additional business.</div>
+                <div class="achievement"><b>Customer Advocacy:</b> Spearheaded a CSAT improvement and customer awareness campaign focused on connectivity education, later rolled out globally by the client across vendor partners.</div>
+                <div class="achievement"><b>Governance:</b> Introduced standardised Ticket Completion Rate governance across overflow back-office operations, demonstrating delivery maturity and contributing to additional business awards.</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-side">
+              <h3>Foundational Leadership Development</h3>
+              <div class="company">Accenture · Teleperformance · APAC · Abbott</div>
+              <div class="dates">2002 – 2010</div>
+            </div>
+            <div class="role-body">
+              <p>Built early leadership breadth through intentionally diverse roles across sales, regulated healthcare processing, financial services servicing, telecommunications support, workforce management, quality, training, and HR capability.</p>
+              <div class="achievement-list">
+                <div class="achievement"><b>Accenture:</b> Led high-value U.S. healthcare claims operations and introduced CTQ-based claims segmentation with Poka-Yoke controls to deliver zero-defect outcomes.</div>
+                <div class="achievement"><b>Teleperformance:</b> Managed U.S. financial services customer care and sales operations, achieving Golden Site recognition within the first post-launch quarter.</div>
+                <div class="achievement"><b>APAC:</b> Held cross-functional leadership responsibilities across Operations, Training, Quality, and Workforce Management.</div>
+                <div class="achievement"><b>Abbott:</b> Built territory-based sales discipline, achieving Sales Champion, back-to-back Sales Champion, and National Best Detailer recognition.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact" id="education">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Education & Continuous Learning</div>
+            <h2>Management, risk, technology, and human behaviour foundations.</h2>
+          </div>
+        </div>
+        <div class="education-list">
+          <div class="edu"><strong>Master of Business Administration</strong><span>University of Western Australia · May 2026</span></div>
+          <div class="edu"><strong>Postgraduate Degree in General Management</strong><span>Asian Institute of Management · May 2024</span></div>
+          <div class="edu"><strong>HarvardX – CS50 for Business Professionals</strong><span>Currently Enrolled</span></div>
+          <div class="edu"><strong>Certificate in Risk Management</strong><span>Saylor Foundation · Dec 2019</span></div>
+          <div class="edu"><strong>Bachelor’s Degree in Psychology, Industrial Organisation</strong><span>San Sebastian College-Recoletos · 2001</span></div>
+          <div class="edu"><strong>Computer Science / IT Short Course</strong><span>Meralco Institute · Basic electronics and computer hardware fundamentals</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <h2>Let’s build technology-enabled operations that can scale.</h2>
+        <p>Available for Country Leadership, GCC / Shared Services, AI-enabled transformation, and operational technology leadership conversations.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:anthonyghenson@gmail.com">Email Anthony</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/anthony-Antho-henson" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
